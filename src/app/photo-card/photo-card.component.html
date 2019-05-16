@@ -1,0 +1,17 @@
+<div class='wrapper'>
+  <div *ngIf='photolist?.length > 0' class='cards-container'>
+    <mat-card 
+      *ngFor='let photo of photolist'
+      [routerLink]="['/detailedImage', photo.id, photo.secret]" 
+      class='card'
+    >
+      <img mat-card-image src='https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_q.jpg' />
+      <mat-card-title class='card__title' [routerLink]="['/authorPhotos', photo.owner.nsid]">
+        {{photo.owner.realname ? photo.owner.realname : photo.owner.username }}
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{photo.dates.posted * 1000 | date}}
+      </mat-card-subtitle>
+    </mat-card>
+  </div>
+</div>

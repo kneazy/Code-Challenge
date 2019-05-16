@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "./variables.scss";
+body {
+  background: #e0e0e0;
+  margin: 0;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: $wrapper_size;
+  margin: 0 auto;
+  padding-top: 70px;
+}

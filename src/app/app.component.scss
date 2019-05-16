@@ -1,0 +1,29 @@
+@import "../variables.scss";
+
+.header-container {
+  position: fixed;
+  z-index: 100;
+} 
+
+.header {
+  @media screen and (max-width: $ipad_portrait) {
+    flex-direction: column;
+    height: auto;
+  }
+
+  &__logo {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__form {
+    margin: auto;
+    @media screen and (max-width: $ipad_portrait) {
+      margin: 0;
+    }
+  }
+
+  &__input {
+    width: 250px;
+  }
+}

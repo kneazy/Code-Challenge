@@ -1,0 +1,21 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 800px;
+  &__title {
+    cursor: pointer;
+    outline: none;
+  }
+
+  &__tags {
+    display: flex;
+    flex-flow: wrap;
+    
+    i {
+      margin-right: 5px;
+    }
+  }
+}

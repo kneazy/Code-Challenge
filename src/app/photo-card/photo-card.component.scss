@@ -1,0 +1,33 @@
+@import "../../variables.scss";
+
+.cards-container {
+  display: grid;
+  justify-content: center;
+
+  @media screen and (min-width: $ipad) {
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+  }
+  @media screen and (min-width: $ipad_portrait) and (max-width: $ipad) {
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+  }
+  @media screen and (min-width: $iphone) and (max-width: $ipad_portrait) {
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+  }
+  @media screen and (max-width: $iphone) {
+    grid-template-columns: auto;
+    grid-gap: 20px;
+  }
+
+  .card {
+    width: 250px;
+    cursor: pointer;
+    outline: none;
+
+    &__title h5 {
+    margin: 0;
+    }
+  }
+}
